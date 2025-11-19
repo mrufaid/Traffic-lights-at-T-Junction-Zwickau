@@ -1,78 +1,86 @@
 # Traffic-lights-at-T-Junction-in- Zwickau
+# Table of Contents
 
-The following example is an attempt to design a signal controller at an intersection in Zwickau. 
+1. Introduction
+2. Model
+3. Conflict Matrix
+4. Intergreen Times
+5. Stages
+6. STP
+7. Coordination Updates STP
+8. Updated STP:
 
----![alt text](2024-10-23.png)
+
+# 1. Introduction:
+The following example is an attempt to design a signal controller at an T-intersection and a 4-way intersection in Zwickau situated approximately 600m apart and further co-ordination between these intersections.
+The road network was modelled in PTV Vissim.
+The use of software LISA+ was used for the calculation of conflicts, intergreen times, stage groups and signal timing plans
+
+---
+---
+# 2. Model
+## Intersection X1: 
+<img width="1603" height="938" alt="image" src="https://github.com/user-attachments/assets/24272d39-a250-4669-8dbb-5848158c7664" /> <img width="847" height="918" alt="image" src="https://github.com/user-attachments/assets/72f0632e-c5f9-4a30-a1de-2ad4497b592a" />
+
+## Intersection X2: 
+<img width="1227" height="855" alt="image" src="https://github.com/user-attachments/assets/f7045ae3-66de-4a30-96a9-7d47e4eb52c2" /> <img width="868" height="883" alt="image" src="https://github.com/user-attachments/assets/a855ee02-4ba3-4f69-a1fa-fd5e8d8f56aa" />
+
+
+# 3. Conflict Matrix
+### Intersection X1: 
+<img width="481" height="413" alt="image" src="https://github.com/user-attachments/assets/d6f6b069-d95f-4d6e-b2d3-c441cb2dc054" />
+
+### intersection X2:
+<img width="720" height="623" alt="image" src="https://github.com/user-attachments/assets/6962bd7e-68e3-4284-84d7-aaf8ceeaf2ef" />
+
+# 4. Intergreen Calculation
+### Intersection X1: 
+<img width="534" height="502" alt="image" src="https://github.com/user-attachments/assets/9bcaea22-bf5e-4bd3-b9de-591123baede0" />
+
+### Intersection X2:
+<img width="695" height="610" alt="image" src="https://github.com/user-attachments/assets/98e13ee1-507c-4f0c-be88-ccb2128bb335" />
+
+# 5. Stages
+### Intersection X1:
+<img width="867" height="792" alt="image" src="https://github.com/user-attachments/assets/19d7b0a2-e4e8-420e-ab5b-2635a26242f0" />
+
+### Intersection X2: 
+<img width="771" height="747" alt="image" src="https://github.com/user-attachments/assets/3b1ce4e4-83d1-451d-936f-83e9859688f4" />
+
+
+
 
 
 ---
----
+# 6. Signal Time Program:
 
+### Intersection X1: 
+<img width="824" height="677" alt="image" src="https://github.com/user-attachments/assets/7957c2aa-0f8b-4136-995a-1448c2481348" />
 
-# Intergreen Calculation
-**Phase Change**,  **End Group** and **Start Group** columns as specified:
+Activation Plan & Deactivation Plan: 
 
-| Phase Change | End Group           | Start Group      |
-|--------------|---------------------|------------------|
-| 1.2          | K5 (st)                 | K2               |
-|              | K5 (st)                 | K3               |
-|              | K5 (rt)                 | K2               |
-| 2.3          | K1                  | K4               |
-|              | K2                  | K4               |
-| 3.1          | K4 (lt)             | K1               |
-|              | K4 (lt)             | K5 (st)          |
-|              | K4 (lt)             | K5 (rt)          |
-|              | K4 (rt)             | K5 (st)          |
-
-## Calculation of intergreen time
-
-| Phase Change | End Group           | Start Group      | S0  | Lfz | Vr  | Tr   | Tü | Se | Ve    | Te   |
-|--------------|---------------------|------------------|-----|-----|-----|------|----|----|-------|------|
-| 1.2          | K5 (st)                 | K2               | 15  | 6   | 10  | 2.1  | 3  | 18 | 11.11 | 1.63 |
-|              | K5 (st)                 | K3               | 17  | 6   | 10  | 2.3  | 3  | 16 | 11.11 | 1.44 |
-|              | K5 (rt)                 | K2               | 10  | 6   | 5   | 3.2  | 2  | 40 | 11.11 | 3.6  |
-| 2.3          | K1                  | K4               | 23  | 6   | 10  | 2.9  | 3  | 15 | 11.11 | 1.35 |
-|              | K2                  | K4               | 15  | 6   | 7   | 3.0  | 2  | 10 | 11.11 | 0.9  |
-| 3.1          | K4 (lt)             | K1               | 30  | 6   | 7   | 5.14 | 2  | 20 | 11.11 | 1.8  |
-|              | K4 (lt)             | K5 (st)          | 22  | 6   | 7   | 4.0  | 2  | 11 | 11.11 | 1.0  |
-|              | K4 (rt)             | K5 (st)          | 25  | 6   | 7   | 4.4  | 2  | 17 | 11.11 | 1.53 |
-
----
+<img width="375" height="433" alt="image" src="https://github.com/user-attachments/assets/da5c43e2-74f1-41c2-8559-41c7e3622597" />
+<img width="377" height="436" alt="image" src="https://github.com/user-attachments/assets/a05e8385-ee80-421e-94f5-7e5a7fd67d50" />
 
 
 
-### Intergreen Matrix
+### Intersection X2: 
+<img width="826" height="851" alt="image" src="https://github.com/user-attachments/assets/6d38482c-c11f-4d11-b86c-df171a5061d0" />
 
-|     | K1 | K2 | K3 | K4 | K5 |
-|-----|----|----|----|----|----|
-| **K1** |  - | X  | X  | 5  | X  |
-| **K2** | X  | -  | X  | 6  | X  |
-| **K3** | X  | X  | -  | X  | X  |
-| **K4** | 6  | X  | X  | -  | 5  |
-| **K5** | X  | 4  | 4  | X  | -  |
+Activation Plan & Deactivation Plan:
+
+<img width="374" height="614" alt="image" src="https://github.com/user-attachments/assets/272ccfb9-27d2-41bb-aa32-f4739e045ead" />
+<img width="385" height="609" alt="image" src="https://github.com/user-attachments/assets/38fb35f6-a75d-4fbe-a406-275c3eda0f04" />
 
 
-### Explanation:
-- Each row and column corresponds to a signal (K1, K2, K3, K4, K5).
-- The **X** entries show which signals can work together at the same time.
+# 7. Attemting Co-ordination:
 
----
+<img width="674" height="670" alt="image" src="https://github.com/user-attachments/assets/8bcdf490-1636-4d21-9962-abde5bd43e1a" />
 
-Choose 90 seconds as cycle time:
+# 8. Updated STP:
+## X1: 
+<img width="830" height="677" alt="image" src="https://github.com/user-attachments/assets/f6441e91-18d6-409e-a930-f0cfee7af023" />
+## X2: 
+<img width="825" height="853" alt="image" src="https://github.com/user-attachments/assets/d70a5839-e97c-4f49-af26-c64f4e039a5e" />
 
 
-Qb.Tu= Qs.Tf
-Tf= Qb.Tu/0.9.Qs
-
-After calculations:
-
-K1= 20 seconds
-K2= 20 seconds
-K3= 18 seconds
-K4= 18 seconds
-K5= 40 seconds
-
-![alt text](Untitled.png)
-After running simulations optimizing the timing:
-
-![alt text](Untitled2.png)
