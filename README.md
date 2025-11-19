@@ -1,6 +1,7 @@
-# Traffic-lights-at-T-Junction-in- Zwickau
+# Design of Traffic Lights at Various Intersections in Zwickau and Their Subsiquent Co-ordination
+---
+---
 # Table of Contents
-
 1. Introduction
 2. Model
 3. Conflict Matrix
@@ -8,7 +9,8 @@
 5. Stages
 6. STP
 7. Coordination Updates STP
-8. Updated STP:
+8. Updated STP
+9. Description of Files
 
 
 # 1. Introduction:
@@ -16,8 +18,7 @@ The following example is an attempt to design a signal controller at an T-inters
 The road network was modelled in PTV Vissim.
 The use of software LISA+ was used for the calculation of conflicts, intergreen times, stage groups and signal timing plans
 
----
----
+
 # 2. Model
 ## Intersection X1: 
 <img width="1603" height="938" alt="image" src="https://github.com/user-attachments/assets/24272d39-a250-4669-8dbb-5848158c7664" /> <img width="847" height="918" alt="image" src="https://github.com/user-attachments/assets/72f0632e-c5f9-4a30-a1de-2ad4497b592a" />
@@ -51,7 +52,6 @@ The use of software LISA+ was used for the calculation of conflicts, intergreen 
 
 
 
----
 # 6. Signal Time Program:
 
 ### Intersection X1: 
@@ -82,5 +82,11 @@ Activation Plan & Deactivation Plan:
 <img width="830" height="677" alt="image" src="https://github.com/user-attachments/assets/f6441e91-18d6-409e-a930-f0cfee7af023" />
 ## X2: 
 <img width="825" height="853" alt="image" src="https://github.com/user-attachments/assets/d70a5839-e97c-4f49-af26-c64f4e039a5e" />
+
+# Description of Files:
+1. Intersection_X1 zip : Lisa model file for intersection X1
+2. Intersection_X2.zip : Lisa model file for intersection X2
+3. Zwickau_route_co-ordination.zip : Lisa co-ordination file
+4. Zwickau.inpx: Vissim file
 
 
